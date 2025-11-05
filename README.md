@@ -2,4 +2,8 @@
 Tareas CSS para su revisión
 | Tarea | Descripción Breve | Enlace Publicado (GitHub Pages) |
 
-| **Ejercicio 07** | Ejercicio 7 de clase con mis cambios. | [Ver Despliegue](https://github.com/kampaBru/CSS-tareas-entregables/tree/main/CSS%20Proyectos%2007%20-%20Elearning%20landing%20page/Css_proyecto_07) |
+## 📁 Tareas de CSS
+
+### 07. Elearning Landing Page
+[🔗 Ver Página Web Final](https://kampaBru.github.io/CSS-tareas-entregables/css-proyecto-07/tarea-07/index.html)
+[📂 Ver Código Fuente](https://github.com/kampaBru/CSS-tareas-entregables/tree/main/css-proyecto-07/tarea-07)
