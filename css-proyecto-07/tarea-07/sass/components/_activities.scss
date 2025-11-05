@@ -1,0 +1,112 @@
+.activities {
+  padding-bottom: 40px;
+  background: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
+  
+  @include breakpoint(tablet) {
+    padding-bottom: 60px;
+  }
+   
+  @include breakpoint(desktop, desktopxl, desktopultra) {
+    padding-bottom: 80px;
+    padding-top: 10px;
+    
+  }
+
+  &__header {
+    background-image: $gradient-pink-orange;
+    padding: 25px 30px;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    
+    @include breakpoint(tablet, tablethorizontal, desktop, desktopxl, desktopultra){
+    margin-bottom: 0;
+    }
+    @include breakpoint(desktop, desktopxl){
+      font-size: 24px;
+    }
+  }
+  
+
+  &__item {
+    padding: 20px 56px 28px 40px;
+    margin-bottom: 45px;
+    background-color: white;
+    border-radius: 15px;
+    position: relative;
+    
+    @include breakpoint(tablet, tablethorizontal, desktop, desktopxl, desktopultra) {
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      background: $gradient-pink-orange;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      position: absolute;
+      top: -25px;
+      left: 25px;
+    }
+
+    &-title {
+      color: black;
+      font-size: 24px;
+      margin-top: 20px;
+      margin-bottom: 16px;
+      @include breakpoint(desktop, desktopxl, desktopultra) {
+        font-size: 24px;
+      }
+    }
+
+    &-description {
+      font-size: 16px;
+      color: #83869A;
+      line-height: 24px;
+      font-weight: 300;
+      margin-bottom: 28px;
+      @include breakpoint (desktop, desktopxl, desktopultra) {
+        font-size: 18px;
+        flex-grow: 1;
+        margin-bottom: 20px;
+      }
+    }
+    
+    &-cta {
+      font-size: 16px;
+      color: $orange;
+      font-weight: 700;
+      text-decoration: none;
+      margin-top: auto;
+    }
+  }
+
+  .container {
+    @include breakpoint(tablet, tablethorizontal) {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 60px 30px;
+
+    }
+    @include breakpoint(tablethorizontal) {
+      padding: 0 20px 40px 20px;
+    }
+    
+    @include breakpoint(desktop, desktopxl, desktopultra) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 80px;
+      column-gap: 30px;
+      margin-top: 0;
+    }
+  }
+}
