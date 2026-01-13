@@ -1,0 +1,24 @@
+@import 'reset';       // Primero: limpia estilos por defecto
+@import 'typography';  // Segundo: define fuentes y textos
+@import 'animations';  // Tercero: animaciones
+
+html {
+    box-sizing: border-box;
+    font-size: 18px;
+
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  
+   
+  /* Selección de texto
+     ========================================================================== */
+  ::selection {
+    background-color: $primary; // variable de color principal
+    color: white;
+  }

@@ -1,0 +1,73 @@
+ 
+header.header-principal {
+  background-color: transparent; 
+  position: relative;
+  z-index: 10; // Para que el menú quede por encima de todo
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 127px;
+  padding-left: 160px;
+  padding-right: 160px;
+  padding-top: 46px; //para que el color verde pueda llegar hasta arriba.
+  color: $secondary;
+
+
+ .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    
+  }
+  
+  .header-logo {
+    margin-right: 164px;
+      img {
+        display: block;
+      }
+    }
+
+ 
+  .primary-nav{
+    margin-right: 251px;
+    ul {
+   @include reset-list();
+   display: flex;
+   gap: 46px;
+    }
+    
+      a {
+        text-decoration: none;
+    
+    }
+
+  } 
+  
+  .secondary-nav{
+      ul {
+        @include reset-list();
+        display: flex;
+        gap: 32px;
+      }
+   
+  }
+  .account-links{
+      ul {
+        @include reset-list();
+        display: flex;
+        gap: 32px;
+       
+        li:nth-child(1) a {
+        list-style: none;
+        
+        }
+
+      }
+     
+      li:nth-child(2) a {
+        @include btn();
+      }
+}
+  
+ 
+}

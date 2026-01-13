@@ -1,0 +1,37 @@
+.hero-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  min-height: calc(100vh - 120px);
+  gap: 40px;
+}
+
+.hero-left {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+
+
+.hero-visual {
+  flex: 0 0 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items:  flex-end;
+  min-height: 820px;
+
+  .woman-overlay {
+    position: absolute;
+    bottom: 130px;
+    right: 50px;
+    width: auto;
+    height: 110%;
+    max-width: none;
+    z-index: 5;
+    object-fit: contain;
+  }
+}
+
+

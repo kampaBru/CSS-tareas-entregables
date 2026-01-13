@@ -1,0 +1,57 @@
+// Tipografía principal
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Plus Jakarta Sans', sans-serif;
+
+// Tamaños base
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
+// Aplica fuentes al proyecto
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: 400; // Peso regular
+  color: $text-dark;; // Asegúrate que $dark está definido en _variables.scss
+}
+
+// Encabezados
+h2, h4, h5, h6 {
+  font-family: $font-primary;
+  font-weight: 600; // Semi-bold
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: wheat;
+}
+h1 {
+  font-family: $font-primary;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+}
+h3 {
+  font-family: $font-primary;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+
+}
+
+// Pesos específicos (usa los que se cargarón en Google Fonts)
+.text-light {
+  font-weight: 300;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-medium {
+  font-weight: 500;
+}
+
+.text-bold {
+  font-weight: 700;
+}

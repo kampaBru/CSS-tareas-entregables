@@ -1,0 +1,66 @@
+//Breakpoints
+$sbp-tablet: 576px;           // Tablet
+$sbp-tablet-horizontal: 768px; // Tablet en Horizontal
+$sbp-desktop: 1200px;          // Desktop Estándar
+$sbp-desktop-xl: 1600px;      // Desktop XL (Diseño de 1200px)
+
+//anchos de contenedor
+$container-max-width-mobile: 90%;
+$container-max-width-tablet: 750px;
+$container-max-width-desktop: 1200px;
+$container-max-width-desktop-xl: 1600px;
+
+
+
+
+// ===== COLORS =====
+$primary: #070D15;       // Rosa oscuro (logo, botones principales)
+$secondary: #264065;     // Dark Blue (fondos, textos secundarios)
+$color-grey-light: #909090; // Gris claro (fondos secundarios)
+$dark: #909090;          // Textos
+$color-caja: #A9D6CB;   // Color de caja
+//$light: #FFF9FB;         // Fondo claro
+$white: #FFFFFF;         // Blanco puro
+$black: #000000;         // Negro
+$text-dark: $dark; // Añade esta línea (usa el mismo valor que $dark)
+$light: #FFF9FB;
+$white: #FFFFFF;
+$black: #000000;
+
+
+$background-light: #FFF9FB;
+
+// Colores semánticos
+$error: #FF5252;         // Errores
+$success: #4CAF50;       // Éxito
+$warning: #FFC107;       // Advertencias
+
+// // Gradientes
+// $gradient-primary: linear-gradient(135deg, $primary 0%, $secondary 100%);
+
+// // Sombras
+// $shadow-sm: 0 2px 4px rgba($black, 0.1);
+// $shadow-md: 0 4px 8px rgba($black, 0.15);
+
+// ===== TIPOGRAFÍA =====
+$font-primary: 'Poppins', sans-serif;
+$font-secondary: 'Plus Jakarta Sans', sans-serif;
+$font-base-size: 18px;
+
+// Pesos de fuente
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+
+// ===== ESPACIADOS =====
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+
+
+// Tamaños de logo
+$logo-width: 80px; //desktop
+$logo-height: 40px; //desktop
+$logo-width-mobile: 140px; //versión responsive
