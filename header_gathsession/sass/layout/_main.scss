@@ -1,0 +1,31 @@
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 50%;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "content gallery"
+    "features gallery";
+  column-gap: 60px;
+  row-gap: 40px;
+  align-items: center;
+  padding: 60px;
+
+  //asignar cada bloque a su area correspondiente
+
+  .hero-content {
+    grid-area: content;
+  }
+
+  .hero-gallery {
+    grid-area: gallery;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+
+  .hero-features {
+    grid-area: features;
+    align-items: start;
+  }
+
+}

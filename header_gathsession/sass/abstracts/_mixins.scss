@@ -1,0 +1,68 @@
+@mixin breakpoint($bp){
+
+  @if $bp == tablet {
+    @media (min-width: $sbp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $sbp-tablet-horizontal) {
+      @content;
+    }
+  }
+
+  @if $bp == desktop {
+    @media (min-width: $sbp-desktop) {
+      @content;
+    }
+  }
+
+  @if $bp == desktopxl {
+    @media (min-width: $sbp-desktop-xl) {
+      @content;
+    }
+  }
+  
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+  @mixin btn(){
+  background-color: $color-pink;
+  font-family: $font-primary;
+  font-size: 18px;
+  font-weight: 400px;
+  color: $color-white;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 15px 10px 10px 0px;
+  width: 190px;
+  height: 50px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  line-height: 1;
+  font-weight: 400;
+
+  &:hover {
+    background-color: $color-yellow;
+    color: $color-fondo;
+  }
+
+  &--bold {
+    font-weight: 900;
+  }
+
+}
+
+
+
+

@@ -1,0 +1,61 @@
+// Tamaños base
+$font-size-base: 24px;
+$line-height-base: 40px;
+
+// Aplica fuentes al proyecto
+body {
+  font-family: $font-primary;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: 400; // Peso regular
+ 
+}
+
+// Encabezados
+h2, h4, h5, h6 {
+  font-family: $font-primary;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: wheat;
+
+}
+h1 {
+  font-family: $font-secondary;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 80px;
+  color: $color-white;
+}
+p {
+  font-family: $font-primary;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  color: $color-white;
+}
+li {
+  font-family: $font-primary;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  list-style: none;
+    a {
+      color: $color-grey;
+      text-decoration: none;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}

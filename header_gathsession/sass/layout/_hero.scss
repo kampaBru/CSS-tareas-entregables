@@ -1,0 +1,186 @@
+.hero-content {
+  grid-area: content;
+  max-width: 95%;
+  
+    .hero-tittle {
+      margin-bottom: 24px;
+      margin-top: 134px;
+    }
+    .hero-description {
+      max-width: 80%;
+      margin-bottom: 24px;
+      opacity: 0.5;
+    }
+    .nav-actions-hero {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      
+        .btn-primary {
+          @include btn();
+        }
+        .btn-flecha {
+          color: $color-white;
+          text-align: center;
+          font-family: $font-primary;
+          font-size: 18px;
+          line-height: normal;
+          font-weight: 600;
+          text-decoration-line: underline;
+          text-decoration-style: solid;
+          align-items: center;
+          justify-content: center;
+          
+          &::after {
+            content: '→';
+            display: inline-flex;
+            //margin-left: 8px;
+            font-size: 40px;
+            color: $color-white;
+            align-items: center;
+            margin-left: 8px;
+            transform: translateY(5px);
+
+            
+          }
+
+        }
+
+    }
+}
+
+.hero-gallery {
+  grid-area: gallery;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); //creamos 3 columnas para distribuir las fotos
+  grid-template-rows: repeat(12, 1fr); //defino filas de tamaño base para poder mover las fotos arriba/abajo
+  //min-height: 800px;
+  height: 80vh;
+  align-items: center;
+  gap: 20px;
+
+    //círculo pequeño
+    &::before {
+    content: "";
+    position: absolute;
+    // Medidas
+    width: 850px;
+    height: 850px;
+    border: 1px solid $color-circle; 
+    border-radius: 50%;
+    opacity: 0.25;
+    //posición
+    top: 90%;
+    left: 80%;
+    //colocación
+    transform: translate(-30%, -50%); 
+    // IMPORTANTE: z-index negativo para que esté al fondo de todo
+    z-index: -1; 
+    pointer-events: none;
+  }
+  //círculo grande
+  &::after {
+    content: "";
+    position: absolute;
+    // Medidas
+    width: 1102px;
+    height: 1102px;
+    border: 1px solid $color-circle; 
+    border-radius: 50%;
+    opacity: 0.25;
+    //posición
+    top: 70%;
+    left: 67.5%;
+    //colocación
+    transform: translate(-30%, -50%); 
+    // IMPORTANTE: z-index negativo para que esté al fondo de todo
+    z-index: -1; 
+    pointer-events: none;
+  }
+
+  .gallery-item {
+    width: 100%;
+    border-radius: 80px;
+    overflow: hidden;
+    background-color: $color-fondo;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+    &.item-1 {
+      grid-column: 1;
+      grid-row: 2 / 9;
+      background-color: $color-pink;
+      align-self: flex-end;
+      width: 90%;
+    }
+    &.item-2 {
+      grid-column: 2;
+      grid-row: 1 / 5;
+      background-color: $color-blue;
+      align-self: flex-end;
+      width: 80%;
+    }
+    &.item-3 {
+      grid-column: 1;
+      grid-row: 9/ 12;
+      background-color: $color-pink-light;
+      align-self: flex-start;
+      width: 80%;
+      
+    }
+    &.item-4 {
+      grid-column: 2;
+      grid-row: 5 / 12;
+      background-color: $color-orange;
+      align-self: center;
+      width: 80%;
+    }
+    &.item-5 {
+      grid-column: 3;
+      grid-row: 3 / 11;
+      background-color: $color-yellow;
+      align-self: flex-start;
+      width: 90%;
+    }
+  }
+
+  
+}
+
+
+.hero-features {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+.feature-item {
+
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+   span {
+      font-family: $font-primary;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: normal;
+      color: $color-white;
+      
+    }
+  }
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.375);
+  border-radius: 10px 10px 10px 10px;
+  padding: 10px;
+}
+ .feature-img {
+      width: 40px;
+      height: 40px;
+    }

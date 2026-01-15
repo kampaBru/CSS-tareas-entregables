@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./img/gathsession..svg"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlowQueen</title>
+    <script type="module" src="./main.js"></script> <!-- ACUERDATE DE BORRAR ESTO CUANDO HAGAS GITHUB-->
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>        
+<header>
+  <div class="header-main">
+    <div class="container">
+      <a href="" class="header-logo">
+        <img src="./img/gathsession..svg" alt="Imagen Corporativa">
+      </a>
+      <nav class="header-menu">
+        <ul>
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+<main class="container main-grid">
+  <div class="hero-content">
+    <h1 class="hero-tittle">Build your best community starting from here.</h1>
+    <p class="hero-description">Meet and communicate with the best people to run projects, events or other activities in a more effective and fun way</p>
+  
+    <div class="nav-actions-hero">
+      <a class="btn btn-primary" href="#">Get Started</a>
+      <a class="btn-flecha" href="#">Learn More</a>
+    </div>
+  </div>
+  <div class="hero-gallery">
+    <figure class="gallery-item item-1">
+      <img src="./img/handsome-serious-calm-guy-with-dark-skin-and-beard-2021-09-02-14-28-37-utc 1.png" alt="Persona 1">
+    </figure>
+    <figure class="gallery-item item-2">
+      <img src="./img/pretty-young-asian-woman-makes-meditating-gesture-2021-08-31-09-20-19-utc 1.png" alt="Persona 2">
+    </figure>
+    <figure class="gallery-item item-3">
+      <img src="./img/vertical-shot-of-young-european-woman-in-glasses-w-2021-08-31-09-20-19-utc.png" alt="Persona 3">
+    </figure>
+    <figure class="gallery-item item-4">
+      <img src="./img/positive-smiling-handsome-caucasian-man-looks-play-2021-08-31-09-20-19-utc 1.png" alt="Persona 4">
+    </figure>
+    <figure class="gallery-item item-5">
+      <img src="./img/positive-dark-skinned-woman-dressed-in-domestic-go-2021-09-02-14-29-01-utc.png" alt="Persona 5">
+    </figure>
+  </div>
+  <section class="hero-features">
+    <div class="feature-item">
+      <div class="feature-icon">
+        <img src="./img/comments.svg" alt="" aria-hidden="true">
+      </div>
+      <span>Build Community</span>
+    </div>
+
+     <div class="feature-item">
+      <div class="feature-icon">
+        <img class="feature-img" src="./img/week_schedule.svg" alt="" aria-hidden="true">
+      </div>
+      <span class="icon-description">Share Events</span>
+    </div>
+
+     <div class="feature-item">
+      <div class="feature-icon">
+        <img src="./img/post.svg" alt="" aria-hidden="true">
+      </div>
+      <span>Get Information</span>
+    </div>
+  </section>
+</main>
+    
+<script type="module" src="./main.js"></script>
+<script>
+  // Seleccionamos todos los enlaces del menú
+  const menuLinks = document.querySelectorAll('.header-menu a');
+
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // 1. Eliminamos la clase 'active' de todos los enlaces
+      menuLinks.forEach(item => item.classList.remove('active'));
+      
+      // 2. Añadimos la clase 'active' al enlace que hemos pulsado
+      this.classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>
