@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GlowQueen</title>
-    <script type="module" src="./main.js"></script> <!-- ACUERDATE DE BORRAR ESTO CUANDO HAGAS GITHUB-->
     <link rel="stylesheet" href="./css/style.css">
 
 </head>
@@ -83,19 +82,5 @@
 </main>
     
 <script type="module" src="./main.js"></script>
-<script>
-  // Seleccionamos todos los enlaces del menú
-  const menuLinks = document.querySelectorAll('.header-menu a');
-
-  menuLinks.forEach(link => {
-    link.addEventListener('click', function() {
-      // 1. Eliminamos la clase 'active' de todos los enlaces
-      menuLinks.forEach(item => item.classList.remove('active'));
-      
-      // 2. Añadimos la clase 'active' al enlace que hemos pulsado
-      this.classList.add('active');
-    });
-  });
-</script>
 </body>
 </html>
