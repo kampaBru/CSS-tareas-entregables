@@ -1,0 +1,188 @@
+.page-home .hero {
+
+  //estilos movil -----------------------------------------------------------
+    display: block;
+    width: 100%;
+
+  .hero-media .header-picture{
+    width: 100%;
+    height: auto; 
+    
+
+      .header-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      
+      }
+  }
+  .hero-content {
+    
+    .container {
+      margin-top: 32px;
+      width: 100%;
+      span {display: block;}
+    }
+    
+    .header-description {
+      margin-bottom: 32px;
+      margin-top: 32px;
+      margin-left: 0;
+    }
+    a.button {margin-bottom: 120px;}
+  }
+  // breakpoint tablet --------------------------------------------------------
+
+  @include breakpoint(tablet, tablethorizontal) {
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom:  120px;
+
+      .hero-media {
+        width: 110%;
+        height: auto;
+      }
+      .hero-content {
+        display: flex;
+        justify-items: center;
+
+          .container {
+            margin-top: 100px;
+            margin-left: -20px;
+        }
+          .header-title {
+            font-size: 70px;
+            line-height: 65px;
+            margin-top: 0;
+          }
+          .header-description {
+            max-width: 90%;
+            margin-bottom: 48px;
+          }
+      }
+
+    }
+      // breakpoint tablet-horizontal
+
+  @include breakpoint(tablethorizontal) {
+
+      .hero-media {
+        //width: auto;
+        height: auto;
+      }
+      .hero-content {
+        
+          .container {
+            margin-top: 140px;
+            margin-left: -20px;
+        }
+          .header-title {
+            margin-bottom: 48px;
+          } 
+      }
+
+    }
+    //-----------------Estilos Desktop---------------------------------------
+    @include breakpoint(desktop, desktopxl, desktopultra) {
+      display: grid;
+      grid-template-columns: 1fr 540px 1fr;
+      align-items: stretch;
+      position: relative;
+      background: linear-gradient(to right, $color-black 20%, $color-black 40%, $color-white 40%); //pinta la primera parte de negro y la última de blanco
+      margin-bottom: 120px;
+
+        @include breakpoint(desktopxl) {
+          grid-template-columns: 1fr 635px 1fr;
+        }
+      
+      
+      .hero-media {//foto
+        grid-column: 2; //columna 2
+        grid-row: 1;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        z-index: 1; //foto abajo
+              @include breakpoint(desktopxl) {
+                width: 550px;
+                height: auto;
+              }
+              @include breakpoint(desktopultra) {
+                width: 750px;
+                height: auto;
+              }
+          .header-picture {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            .header-image {
+            width: 100%;
+            height: 100%;
+          }
+          }
+         
+        
+      }
+      .hero-content {
+        grid-column: 1 / span 3; //abarca desde la columna 1 hasta la columna 3
+        grid-row: 1; //en la misma fila que la foto
+        z-index: 2; //por encima del fondo
+        pointer-events: none; //para hacer sobre la foto
+          .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr ; //replicamos el grid dentro
+            align-items: baseline;
+            pointer-events: auto;
+            
+              .header-title {
+                grid-column: 1 / span 2;
+                color: $color-white;
+                margin-left: 6%;
+                align-self: center;
+                font-size: 96px;
+                line-height: 88px;
+                margin-top: 180px;
+
+                  @include breakpoint(desktopultra){
+                    font-size: 100px;
+                    line-height: 90px;
+                    margin-left: 21%;
+                    margin-top: 180px;
+                  }
+              }
+              .header-description, .header__buttons{
+                font-family: $font-secondary;
+                grid-column: 3;
+                position: relative;
+                z-index: 5;
+                align-self: center;
+                margin-top: 180px;
+                font-size: 22px;
+                line-height: 32px;
+                width: 350px;
+                margin-right: 0;
+                align-self: flex-start;
+                  
+
+                  @include breakpoint(desktopultra) {
+                    margin-top: 230px;
+                    margin-left: 18%;
+                    font-size: 28px;
+                    width: 450px;
+                    line-height: 38px;
+                    font-weight: 300px;
+                  }
+              }
+              .header__buttons {
+                margin-top: 64px;
+              }
+              
+          }
+            }
+    }
+      
+
+}//llave que cierra .page-home y hero

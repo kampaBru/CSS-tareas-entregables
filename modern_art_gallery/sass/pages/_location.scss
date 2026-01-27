@@ -1,0 +1,194 @@
+.page-location {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $color-black;
+
+  .map-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  .button {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: 10;
+    text-decoration: none;
+    display: inline-flex; // Para que el texto y el icono no se rompan
+  }
+  
+    .location-map {
+        position: relative;
+        width: 100%;
+        line-height: 0;
+              
+
+        .map-img {
+          width: 100%;
+          height: auto;
+          display: block;
+        }
+        .map-pin { // posición de la señal
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+            img {
+              width: 66px;
+              height: auto;
+              display: block;
+
+            }
+            &::after { //color de la señal y posición
+              content: '';
+              display: block;
+              position: absolute;
+              top: 22%;
+              left: 50%;
+              transform: translateX(-50%);
+              width: 24px;
+              height: 24px;
+              background-color: $color-orange;
+              border-radius: 50%;
+              z-index: 6;
+            }
+        }
+
+  }
+//---------------------MAIN--------------------------
+  .location-content {
+      background-color: $color-black; 
+      color: $color-white;
+      padding: 48px 0; 
+      display: flex;
+      flex-grow: 1; //empuja el footer al final
+
+        .container {
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+        
+        }
+        .location-title {
+          width: auto;
+          margin: 0;
+          text-transform: uppercase;
+          font-size: 50px;
+          line-height: 1;
+          margin-bottom: 48px;
+          color: $color-white;
+        }
+
+        .location-address-title {
+          color: $color-orange;
+          margin-bottom: 20px;
+        }
+
+        .location-details {
+          font-family: $font-secondary;
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 400;
+          color: $color-white;
+          margin-bottom: 20px;
+          
+        }
+        .location-description {
+          font-family: $font-secondary;
+          font-size: 18px;
+          line-height: 28px;
+          color: $color-white;
+          margin-bottom: 20px;
+          color: $color-white;
+          margin-bottom: 56px;
+        }
+
+        //----------BREAKPOINT---------------
+          @include breakpoint (tablet, desktop, desktopxl desktopultra) {
+            display: flex;
+            flex-direction: row;
+          
+            .container {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+              max-width: 1110px;
+              margin: 0 auto;
+              padding: 0 20px;
+              gap: 50px;
+                  @include breakpoint(desktop) {
+                    gap: 140px;
+                  }
+                   @include breakpoint(desktopxl, desktopultra) {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 60px;
+                    max-width: 1600px;
+                    margin: 0 auto;
+                    padding: 0;
+                    
+                  }
+                  
+            }
+            .location-title  {
+              font-size: 50px;
+              line-height: 1;
+              max-width: none;
+              white-space: normal;
+              flex-basis: 100%;
+              max-width: 180px;
+                
+              
+            }
+            .location-address-title {
+              font-family: $font-primary;
+              font-size: 32px;
+              line-height: 32px;
+            }
+          
+            .location-description {
+              max-width: 538px; 
+            }
+        }
+
+          @include breakpoint(desktop, desktopxl, desktopultra) {
+             
+              .location-title {
+                font-size: 70px;
+                line-height: 70px;
+              }
+
+              .location-address-title {
+                font-size: 36px;
+                line-height: 36px;
+              }
+        }
+
+    }
+//------------FOOTER--------------------------------------------------
+    .footer {
+      background-color: $color-orange;
+      margin-top: 0;
+      width: 100%;
+        .p-footer {
+          color: $color-black;
+        }
+
+      .footer-icon-socials {
+        display: flex;
+        gap: 20px;
+        
+          img {
+            filter: brightness(0);
+            transition: filter 0.3s aese;
+        }
+
+    }
+
+  }
+}

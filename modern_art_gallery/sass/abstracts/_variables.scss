@@ -1,0 +1,58 @@
+//Breakpoints. Definición
+$bp-movil-small: 320px;        // Móvil Pequeño
+$bp-movil-small-horizontal: 414px; // Móvil Pequeño en Horizontal
+$bp-movil-big: 414px;        // Móvil Grande
+$bp-movil-big-horizontal: 768px; // Móvil Grande en Horizontal
+$bp-tablet: 768px;           // Tablet
+$bp-tablet-horizontal: 1024px; // Tablet en Horizontal
+$bp-desktop: 1200px;          // Desktop Estándar
+$bp-desktop-xl: 1440px;      // Desktop XL (Diseño de 1200px)
+$bp-desktop-xxl: 1800px;     // Desktop XXL
+
+//anchos de contenedor
+$container-max-width-mobile: 290px;        // Para iPhone SE / Móviles muy pequeños
+$container-max-width-mobile-big: 390px;    // Para iPhone Pro Max / Android grandes
+$container-max-width-tablet: 720px;       // Para pantalla de 768px
+$container-max-width-tablet-horizontal: 920px;  //Para tablet horizontal 1024px
+$container-max-width-desktop: 1140px;     // Para pantalla de 1200px
+$container-max-width-desktop-xl: 1380px;  // Para pantalla de 1440px
+$container-max-width-desktop-xxl: 1720px; // Para pantalla de 1800px
+
+
+
+
+// ===== COLORS =====
+$color-orange: #D5966C;
+$color-black: #151515;
+$color-grey-light: #444444;
+$color-white: #FFFFFF;
+
+
+
+// Colores semánticos
+$error: #FF5252;         // Errores
+$success: #4CAF50;       // Éxito
+$warning: #FFC107;       // Advertencias
+
+
+// ===== TIPOGRAFÍA =====
+$font-primary: 'Big Shoulders', sans-serif;
+$font-secondary: 'Outfit', sans-serif;
+
+
+// Pesos de fuente
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 900;
+
+// ===== ESPACIADOS =====
+$spacing-xs: 8px;
+$spacing-sm: 16px;
+$spacing-md: 24px;
+$spacing-lg: 32px;
+
+// Tamaños de logo
+$logo-width: 80px; //desktop
+$logo-height: 40px; //desktop
+$logo-width-mobile: 140px; //versión responsive

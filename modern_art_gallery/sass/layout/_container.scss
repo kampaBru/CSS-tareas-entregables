@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80%;
+
+@include breakpoint(movilgrande) {
+    max-width: $container-max-width-mobile-big;
+}
+
+@include breakpoint(tablet) {
+    max-width: $container-max-width-tablet;
+    
+  }
+
+@include breakpoint(tablethorizontal) {
+    max-width: $container-max-width-tablet-horizontal;
+    
+  }
+  
+  @include breakpoint(desktop) {
+    max-width: $container-max-width-desktop;
+
+  }
+  
+  @include breakpoint(desktopxl) {
+    max-width: $container-max-width-desktop-xl;
+
+  }
+  @include breakpoint(desktopultra) {
+    max-width: $container-max-width-desktop-xxl;
+   
+  }
+ 
+}

@@ -1,0 +1,100 @@
+//estos mixins son por lo que llamamos a @include en cada breakpoint 
+
+@mixin breakpoint($bp...) {
+@each $bp in $bp {
+
+  @if $bp == movilsmall {
+    @media (min-width: $bp-movil-small) and (max-width: #{$bp-movil-small-horizontal - 1px}) {
+      @content;
+    }
+  }
+
+   @if $bp == movilgrande {
+    @media (min-width: $bp-movil-big) and (max-width: #{$bp-movil-big-horizontal - 1px}) {
+      @content;
+    }
+  }
+
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) and (max-width: #{$bp-tablet-horizontal - 1px}) {
+      @content;
+    }
+  }
+
+  @if $bp == tablethorizontal {
+    @media (min-width: $bp-tablet-horizontal) and (max-width: #{$bp-desktop - 1px}) {
+    @content;
+    }
+  }
+  //mantener en desktop está variables que aplica al resto en adelante.
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) {
+      @content;
+    }
+  }
+    @if $bp == desktopxl {
+    @media (min-width: $bp-desktop-xl) { @content; }
+  }
+  @if $bp == desktopultra {
+    @media (min-width: $bp-desktop-xxl) { @content; }
+  }
+
+}
+}
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+
+@mixin button {
+  display: inline-flex;
+  align-items: stretch;
+  font-family: $font-primary;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-white;
+  background-color: $color-black;
+  transition: background-color 0.3s ease;
+
+    .button-text {
+      padding: 24px 50px;
+      display: flex;
+      align-items: center;
+        @include breakpoint(desktopxl, desktopultra) {
+          padding: 24px 82px;
+          font-size: 30px;
+        }
+    }
+    .button-icon, .button-icon-invert{//estilos base para los dos
+      width: 56px;
+      background-color: $color-orange;
+      background-image: url('../img/direction.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 20%;
+      transition: background-color 0.3s ease;
+    }
+    .button-icon-invert {
+      background-image: url('../img/direction-invert.svg');
+    }
+
+    &:hover {
+    background-color: $color-orange;
+    color: $color-white;
+
+    .button-icon  {
+      background-color: $color-black;
+    }
+    .button-icon-invert {
+      background-color: $color-black;
+    }
+  }
+}
+
+
+

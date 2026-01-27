@@ -1,0 +1,200 @@
+.page-home .main-content {
+  // El contenedor solo centra
+  .container {
+    width: 100%;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    margin-bottom: 32px;
+  }
+  
+  .gallery__item {
+    width: 100%;
+  }
+
+  .gallery__image-container {
+    width: 100%;
+    margin-bottom: 25px;
+    overflow: hidden;
+    
+  }
+  .gallery__content {
+    margin-bottom: 32px;
+      .heading-title {
+        width: 100%;
+        margin-bottom: 21px;
+        span { display: block;}
+      }
+      .text-main {
+        width: 100%;
+        font-family: $font-secondary;
+        margin-block-end: 0;
+        margin-block-start: 0;
+        color: $color-grey-light;
+      }
+  }
+  .main-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  // Caja oscura de descripción
+  .gallery__item--description {
+    background-color: #151515;
+    padding: 48px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .heading-title, .text-main {
+      color: $color-white;
+    }
+  }
+
+
+  //--------BREAKPOINT-----------------
+  @include breakpoint(tablet, tablethorizontal, desktop, desktopultra) {//definición de áreas y colocación
+    .gallery {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-rows: auto 1fr 1.2fr; //definir para que los anchos de la imagen izquierda y texto sean igual al diseño.
+      grid-template-areas: //defino áreas
+        "feat feat"
+        "col1 col2"
+        "col1 desc";
+        gap: 11px;
+        height: auto;
+      }
+        //asignar las áreas a los item
+    .gallery__item--featured { grid-area: feat; }
+    .gallery__item--collection { grid-area: col1; }
+    .gallery__item--collection2 { grid-area: col2; }
+    .gallery__item--description {grid-area: desc; }
+
+      //colocación de grid interno en featured. Foto izquierda description derecha.
+      .gallery__item--featured {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        grid-template-areas: "text image";
+        gap: 40px;
+          .gallery__image-container {
+            grid-area: image;
+           }
+          .gallery__content {
+            grid-area: text;
+
+                .heading-title {
+                  font-family: $font-primary;
+                  font-size: 70px;
+                  line-height: 1.1;
+                  text-transform: uppercase;
+                  margin-bottom: 20px;                  
+                    span { // para que salte de línea el span y sea en una sola, controla el width solo para desktop.
+                      display: inline;
+                  }
+                  // para el salto de línea entre at y the:
+                  @include breakpoint(desktopxl, desktopultra) {
+                    font-size: 75px;
+                    line-height: 1;
+                    display: block;
+                    max-width: 400px;
+
+
+                  }
+                }
+                  .text-main {
+                    font-family: $font-secondary;
+                    font-size: 22px;
+                    line-height: 32px;
+                  @include breakpoint(desktopxl, desktopultra) {
+                    font-size: 35px;
+                    line-height: 40px;
+                }
+               }
+              
+          }
+        }
+      .gallery__item--collection {
+        grid-area: col1;
+        display: flex; //estira los hijos
+          .gallery__image-container {
+            width: 100%;
+            height: 100%;
+             picture, img {
+              display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; //hace que ocupe todo el ancho y alto.
+              }
+          }
+      }
+      .gallery__item--collection2 {
+        grid-area: col2;
+        display: flex; //permite que el contenedor hijo estire
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+      }
+      .gallery__image-container{
+        width: 100%;
+        height: 100%;
+        margin: 0; //quito el margen de movil
+          picture, .img {
+            display: bloc;
+            width: 100;
+            height: 100;
+            object-fit: cover;
+          }
+      }
+      .gallery__item--description {
+        grid-area: desc;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; //el texto sube al principio de la celda
+        padding-top: 85px;
+        padding-left: 28px; 
+        align-items: flex-start;
+
+              @include breakpoint(desktopxl, desktopultra) {
+                padding-left: 52px;
+                padding-top: 90px;
+
+              }
+        
+          .heading-title {
+              margin-bottom: 24px;
+              font-family: $font-primary;
+              text-transform: uppercase;
+              font-size: 50px;
+              line-height: 45px;
+              
+                  @include breakpoint(desktopxl, desktopultra) {
+                    font-size: 80px;
+                    line-height: 75px;
+                  }
+          }
+          .text-main {
+            padding-right: 28px;
+            font-family: $font-secondary;
+            font-size: 22px;
+            line-height: 32px;
+
+                  @include breakpoint(desktopxl, desktopultra) {
+                    font-size: 32px;
+                    line-height: 40px;
+                    
+                  }
+          }
+
+      }  
+  }
+}
