@@ -14,11 +14,19 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: npm install
-      - run: npm run build
+      
+      # 1. Instalamos y construimos DENTRO de la carpeta del proyecto
+      - name: Install and Build
+        run: |
+          cd modern_art_gallery
+          npm install
+          npm run build
+          
       - uses: actions/configure-pages@v4
+      
+      # 2. Subimos la carpeta dist que está DENTRO de modern_art_gallery
       - uses: actions/upload-pages-artifact@v3
         with:
-          # Aquí le decimos que suba la carpeta que genera Vite
           path: './modern_art_gallery/dist'
+          
       - uses: actions/deploy-pages@v4
