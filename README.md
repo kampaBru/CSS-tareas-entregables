@@ -1,3 +1,25 @@
-# CSS Entrega de tareas<br>
-## Resumen<br>Este repositorio contiene la entrega de los proyectos desarrollados como parte del curso de CSS en Conquer Blocks. Los ejercicios demuestran la aplicación de habilidades fundamentales de maquetación web, centrándose en el uso avanzado de Flexbox, CSS Grid, selectores de CSS, transiciones y responsive design para construir interfaces de usuario robustas y visualmente atractivas. A continuación, se detallan los 5 proyectos incluidos en esta entrega.<br>## Proyectos<br>### 1. Spa & Beauty
-Maquetación completa de una página de spa y belleza. Este proyecto se enfoca en la creación de un layout elegante y responsivo, utilizando Flexbox para la organización de elementos de contenido, secciones de servicios y un formulario de contacto.<br>### 2. Gathsession<br>Implementación de la interfaz de usuario para una plataforma de gestión de eventos. El principal objetivo de este ejercicio fue dominar el posicionamiento de elementos (absoluto y relativo) y la manipulación de la jerarquía visual mediante CSS para lograr una disposición precisa y moderna de los componentes.<br>### 3. Modern Art Gallery<br>Desarrollo de una galería de arte responsiva. Este proyecto se centra en la aplicación de CSS Grid para organizar dinámicamente las imágenes de la galería, asegurando que el diseño se adapte perfectamente a diferentes tamaños de pantalla (móvil, tablet, escritorio) y manteniendo una estética visual coherente.<br>### 4. Portfolio<br>Creación de un portfolio personal interactivo. Este proyecto integra todas las habilidades de maquetación aprendidas, incluyendo Flexbox para la navegación y Grid para las secciones de proyectos. Se implementaron transiciones CSS y efectos hover para mejorar la experiencia del usuario y demostrar habilidades de diseño.<br>### 5. Proyecto HTML<br>Ejecución de un proyecto de estructura básica en HTML. Este ejercicio inicial sirvió como base para establecer la semántica del contenido antes de aplicar los estilos CSS. Se enfoca en el uso correcto de etiquetas semánticas para una accesibilidad óptima y una maquetación ordenada.<br>## Nota de generación<br>Este archivo README.md fue generado automáticamente utilizando la plataforma de automatización n8n y el modelo de lenguaje Gemini.
+# Mis Entregables de CSS 🚀
+
+Bienvenido a mi repositorio de tareas. Aquí puedes explorar mis proyectos y automatizaciones.
+
+## 🎨 Proyectos Destacados
+
+### 01. Spa & Beauty
+* 🌍 [Ver Proyecto en Vivo](https://kampabru.github.io/CSS-tareas-entregables/spa-beauty/)
+* 📂 [Explorar Código Fuente](./spa-beauty/)
+
+### 02. Header Gathsession
+* 🌍 [Ver Proyecto en Vivo](https://kampabru.github.io/CSS-tareas-entregables/header_gathsession/)
+* 📂 [Explorar Código Fuente](./header_gathsession/)
+
+### 03. Modern Art Gallery
+* 🌍 [Ver Proyecto en Vivo](https://kampabru.github.io/CSS-tareas-entregables/modern_art_gallery/)
+* 📂 [Explorar Código Fuente](./modern_art_gallery/)
+
+
+---
+
+## 🤖 Automatizaciones y Workflow
+### Proyecto n8n
+He desarrollado una serie de flujos de trabajo automatizados. Puedes ver toda la documentación, esquemas y lógica aquí:
+* 📖 [Detalles del Proyecto n8n](./n8n/README.md)
