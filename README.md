@@ -20,8 +20,3 @@ Bienvenido a mi repositorio de tareas. Aquí puedes explorar mis proyectos y aut
 * 🌍 [Ver Proyecto en Vivo](https://kampabru.github.io/CSS-tareas-entregables/porfolio/)
 * 📂 [Explorar Código Fuente](./porfolio/)
 ---
-
-## 🤖 Automatizaciones y Workflow
-### Proyecto n8n
-He desarrollado una serie de flujos de trabajo automatizados. Puedes ver toda la documentación, esquemas y lógica aquí:
-* 📖 [Detalles del Proyecto n8n](./n8n/README.md)
