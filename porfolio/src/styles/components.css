@@ -1,0 +1,60 @@
+@layer components {
+  /* --- TARJETAS DE SKILLS --- */
+  .skill__card {
+    @apply flex flex-col gap-1 text-center items-center
+           md:items-start md:text-left md:min-h-[120px];
+  }
+
+  .skill__card h3 {
+   @apply text-white text-[32px] md:text-[48px]
+         font-bold leading-[40px] md:leading-tight
+         tracking-[-1px] mb-1
+         ;
+  }
+
+  .skill__card p {
+    @apply text-whiteLike text-[16px] leading-[26px] md:text-[18px];
+  }
+
+  .contact__card {
+    @apply w-full text-[16px] md:text-[26px] bg-transparent border-b border-white pb-4 uppercase outline-none focus:border-accent transition-colors;
+  }
+  /* --- LÍNEAS Y DECORACIÓN --- */
+  .line-underlined-fina {
+    @apply inline-block w-fit transition-all duration-300 border-b-2 border-accent hover:text-accentHover pb-1;
+  }
+
+  .line-underlined-gorda {
+    @apply inline-block w-fit transition-all duration-300 border-b-4 border-accent hover:text-accentHover;
+  }
+
+  .line-separation {
+    @apply h-[1px] w-full bg-white;
+  }
+
+  /* --- CONTENEDORES --- */
+  .container-global {
+    @apply mx-auto w-full px-4
+           md:max-w-[768px] md:px-[30px]
+           lg:max-w-[1110px] lg:px-[60px]
+           xl:max-w-[1110px] xl:px-0;
+           ;
+  }
+  @layer components {
+  .icon-social {
+    @apply w-6 h-6 
+           md:w-8 md:h-8 
+           lg:w-8 lg:h-8
+           xl:w-10 xl:h-10
+           fill-current text-white 
+           transition-transform hover:scale-110;
+  }
+}
+
+/*
+ {
+  outline: 1px solid red;
+}
+  */
+
+}
