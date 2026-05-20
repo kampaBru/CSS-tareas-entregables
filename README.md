@@ -19,4 +19,8 @@ Bienvenido a mi repositorio de tareas. Aquí puedes explorar mis proyectos y aut
 ### 04. Porfolio (creado con Html5-Tailwindcss-Vite)
 * 🌍 [Ver Proyecto en Vivo](https://kampabru.github.io/CSS-tareas-entregables/porfolio/)
 * 📂 [Explorar Código Fuente](./porfolio/)
+
+### 05. Proyecto HTML con estilos (creado con Html5-Tailwindcss-JavaScript)
+* 🌍 [Ver Proyecto en Vivo](https://kampabru.github.io/CSS-tareas-entregables/proyecto_html_estilos/)
+* 📂 [Explorar Código Fuente](./proyecto_html_estilos/)
 ---
