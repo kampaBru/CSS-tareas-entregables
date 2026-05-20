@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/CSS-tareas-entregables/porfolio/',
+  base: '/CSS-tareas-entregables/',
 })
