@@ -1,0 +1,113 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>Academia Conquer Blocks Academia de programación</title>
+  <meta name="description" content="Conquer Blocks es la mayor academia de programación en habla hispana, 
+      y la que cuenta con mayores garantías de empleo. Aquí podrás aprender sobre Desarrollo Full-Stack, Desarrollo 
+      Blockchain, Inteligencia Artificial y Ciberseguridad.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <!--<link rel="icon" href="icon.svg" type="image/svg+xml">-->
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+   
+</head>
+
+<body>
+  <header class="header-main relative top-0 left-0 w-full">
+    <div class="container-global  relative flex items-center justify-between py-2">      
+        <a href="/" class="block leading-none">
+          <span class="font-['Space_Grotesk'] text-white text-[18px] font-bold tracking-tighter uppercase leading-none
+          md:text-[20px]
+          ">
+          CONQUERBLOCKS
+          </span>
+        </a>
+
+      <button id="menu-btn" class="md:hidden text-3xl text-primary relative z-[60]">☰</button>
+
+        <nav id="menu" class="hidden fixed top-0 right-0 h-screen text-white bg-[#111827] w-[260px] shadow-lg z-50 md:block">
+          <ul class="flex flex-col place-items-baseline m-4 gap-2 py-6 md:flex-row md:py-0 md:gap-6">
+            
+            <details open>
+            <summary class="text-white">Formaciones</summary>
+                <ul>
+                  <li><a href="./cursos/fullstack.html">Master Fullstack</a></li>
+                  <li><a href="./cursos/blockchain.html">Master en Blockchain</a></li>
+                  <li><a href="./cursos/ia.html">Master Inteligencia Artificial</a></li>
+                </ul>
+              </details>
+              <li><a href="./pages/info.html">Sobre nosotros</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="./pages/registro.html">Registro</a></li>
+              <li><a href="./pages/login.html">Login</a></li>
+          </ul>
+        </nav>
+      
+    </div>
+  </header>
+
+  <main class="main-page-secondary w-full">
+    <div class="container-global text-white pt-8 pb-10">
+      <section class="media-card max-w-[600px] mx-auto p-5 text-justify">
+        <h1 class="h1-title pb-10 text-center">Aviso legal</h1>
+        <p class="p-text-diferent">Actualizado por última vez el 20 de Enero de 2023.</p>
+        <p class="p-text-diferent">Información en cumplimiento de la normativa de protección de datos personales a nivel internacional.</p>
+        <p class="p-text-diferent">Empresa, número NO8376Al en Emiratos Árbes Unidos.</p>
+        <p class="p-text-diferent">Dirección postal : Al Shmookh Business Center M 1003, One UAQ, UAQ Free Trade Zone, Umm Al Quwain, U.A.E.</p>
+        <p class="p-text-diferent">Dirección de correo electrónico de contacto: enrique.romero@conquercrypto.com</p>
+        <p class="p-text-diferent">Nuestra página web: www.conquercrypto.io</p>
+        </section>
+    </div>
+  </main>
+  
+  <footer class="footer relative top-0 left-0 w-full">
+    <hr />
+      <div class="container-global flex  justify-between px-0 mb-10">
+          <div class="footer-link mt-10">
+            <a href="/" class="block leading-none">
+                <span class="font-['Space_Grotesk'] text-white text-[18px] font-bold tracking-tighter uppercase leading-none
+                            md:text-[20px]
+                ">CONQUERBLOCKS
+                </span>
+            </a>
+              <h4 class="mt-2">La escuela online <br>de la era moderna</h4>
+          </div>
+
+          <div>
+              <h4 class="text-left mb-2">WEBS</h4>       
+                <ul class="flex flex-col gap-2 text-[12px] text-left md:items-start">
+                  <li><a href="/index.html">ConquerX</a></li>
+                  <li><a href="./cursos.html">Formación</a></li>
+                  <li><a href="./info.html">Sobre nosotros</a></li>
+                  <li><a href="https://es.trustpilot.com/review/conquerx.com">Opiniones</a></li>
+                </ul>  
+            </div>
+        </div>
+          
+      
+    <hr />
+          <div class="text-center text-[10px] pb-2">
+            <p>© 2026 - Todos los derechos reservados - <a href="aviso-legal.html">Aviso Legal</a></p>
+          </div>
+  </footer>
+   <script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+
+  btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+</body>
+
+</html>

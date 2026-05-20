@@ -1,13 +1,212 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>proyecto_html_estilos</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<html class="no-js" lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Academia Conquer Blocks Academia de programación</title>
+  <meta name="description" content="Conquer Blocks es la mayor academia de programación en habla hispana, 
+      y la que cuenta con mayores garantías de empleo. Aquí podrás aprender sobre Desarrollo Full-Stack, Desarrollo 
+      Blockchain, Inteligencia Artificial y Ciberseguridad.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <!--<link rel="icon" href="icon.svg" type="image/svg+xml">-->
+  <link rel="apple-touch-icon" href="./icon.png">
+  <link rel="stylesheet" href="css/normalize.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+   
+</head>
+
+
+<body>
+  <header class="header-main">
+    <div class="container-global header-wrapper">      
+        <a href="/" class="logo-main">CONQUERBLOCKS</a>
+
+      <button id="menu-btn" class="menu-btn" aria-label="Abrir menú">☰</button>
+
+        <nav id="menu" class="nav-main">
+          <ul class="nav-list">
+            <li class="nav-item nav-dropdown">
+            <details>
+              <summary>Formaciones</summary>
+                <ul class="submenu">
+                  <li><a href="./cursos/fullstack.html">Master Fullstack</a></li>
+                  <li><a href="./cursos/blockchain.html">Master en Blockchain</a></li>
+                  <li><a href="./cursos/ia.html">Master Inteligencia Artificial</a></li>
+                </ul>
+              </details>
+              </li>
+            
+              <li><a href="./pages/info.html">Sobre nosotros</a></li>
+              <li><a href="./pages/blog.html">Blog</a></li>
+              <li><a href="./pages/registro.html">Registro</a></li>
+              <li><a href="./pages/login.html">Login</a></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+  <main class="main-page w-full">
+    <!--HERO-->
+    <div class="container-global text-white pt-4">
+      <!-- imagen y texto describiendo el objetivo de la pagina-->
+      <section class="flex flex-col items-center mb-5">
+        <div class="text-center">
+          <h1 class="h1-title">Academia Conquer Blocks</h1>            
+              <h2 class="mb-4">Bienvenido a nuestra escuela nº1 de programación online</h2>
+              <p class="p-text mb-5"> 
+                <strong>Conquer Blocks</strong> es la mayor academia de programación en habla hispana, 
+                y la que cuenta con mayores garantías de empleo. Aquí podrás aprender sobre 
+                <em>Desarrollo Full-Stack</em>, <em>Desarrollo Blockchain</em>, <em>Inteligencia Artificial</em> y
+                <em>Ciberseguridad</em>.
+              </p>
+                <figure class="media-card mx-auto max-w-[280px]">        
+                <img
+                src="./img/imagen_inicio.gif" alt="Imagen tecnológica general" class="aspect-3/2" >
+                <figcaption class="sr-only">Academia Conquer Blocks</figcaption>
+              </figure>
+              <div class="flex flex-col media-card mt-6 text-justify">
+                <p class="p-text">A tu ritmo, donde quieras. Todo el programa educativo está grabado, y disponible de forma online en nuestra plataforma, de manera que no importan tus horarios, tu zona horaria, ni tu disponibilidad, vas a seguir el programa a tu ritmo donde y cuando quieras.</p>
+                <p class="p-text text-white">Ven a conocernos mejor,  <a href="./pages/info.html" class="text-primary ">informate sobre nosotros</a>
+                </p>
+            </div>
+        </div>          
+      </section>
+    </div>
+
+    <!--MAIN-->
+      <!-- listado con la información de los últimos 2 cursos con enlace a ver todos los cursos(cursos)-->
+    <div class="container-global">
+      <section class="mb-10">
+        <div class="flex items-start justify-between mb-4">
+          <div>
+          <h2 class="">Últimas formaciones</h2>
+          <p class="p-text">Descubre las últimas formaciones que hemos añadido </p>
+          </div>
+          <a href="../pages/cursos.html"class="text-primary font-bold">Ver todas</a>           
+        </div>
+
+        <div class="flex flex-col  col-span-2 gap-2 md:flex-row md:justify-between">
+          <article class="course-card">
+              <figure class="course-card figure">
+                <img src="./img/master_web_full.webp" alt="">
+                </figure>
+            <div class="course-card-body">
+                <h3>Máster en Desarrollo Full Stack</h3>
+                
+              <p>El Máster en <strong>Desarrollo Full Stack</strong> que te garantiza un empleo por contrato...</p>
+              <p><strong>El más vendido, </strong>la formación donde aprenderás todo lo que necesitas para convertirte 
+                  en <strong>Desarrollador Full-Stack</strong>, aunque 
+                  partas desde cero en el mundo de la programación.</p>
+              <p>Garantía de empleo. Si no consigues empleo, te devolvemos el dinero</p>
+              <a href="../cursos/fullstack.html" class="course-card-link">más información</a>
+            </div>
+          </article>
+
+          <article class="course-card">
+              
+                <figure class="course-card figure">
+                <img src="./img/blockchain.webp" alt="">
+                </figure>
+              <div class="course-card-body">
+                <h3>Máster en Desarrollo Blockchain</h3>
+                <p>El Máster en <strong>Desarrollo Blockchain</strong> ideal para programadores que quieran
+                  crecer profesioanlemente aprendiendo una especialización. </p>
+                <p>Programa líder en el mercado.</p>
+                <p>Requiere de conocimientos previos en programación.</p>
+                <a href="../cursos/blockchain.html">más información</a>
+            </div>
+          </article>
+          
+        </div>
+      </section>
+
+      <!--listado de las dos últimas noticias y enlace al blog-->
+      <section class="mb-5"> 
+        <div class="items-start justify-between mb-4"> 
+          <div> 
+            <h2><a href="blog.html">Últimas noticias</a></h2> 
+          </div> 
+          <div class="flex flex-col md:flex-row md:gap-4 col-span-2 gap-2"> 
+            <article class="featured-card"> 
+              <div class="featured-card-body">
+                <h3>Desarrollo Full-Stack para perfiles Junior</h3> 
+                <figure> <img src="./img/info_full_stack.webp" alt=""> 
+                </figure> 
+                <p>En el desarrollo web, la distinción entre Backend y frontend es fundamental, delineando dos especializaciones con herramientas, técnicas y objetivos distintos. </p> 
+                <a href="../cursos/fullstack.html">más información</a> 
+              </div>
+              </article> 
+            <article class="featured-card">
+              <div class="featured-card-body">
+              <h3>Backend vs. Frontend: Explorando las Distinciones Fundamentales</h3> 
+                <figure> <img src="./img/info_back_frond.webp" alt=""> 
+                </figure> 
+                <p>En el dinámico mundo del desarrollo web, el rol de desarrollador <strong>Full Stack</strong> ha emergido como carrera codiciada, ofreciendo la promesa de dominar tanto el fronted</p> 
+                <a href="../cursos/fullstack.html">más información</a> 
+              </div> 
+            </article> 
+          </div> 
+        </div> 
+      </section>
+
+
+    </div>
+  </main>  
+  <footer class="footer relative top-0 left-0 w-full">
+    <hr />
+      <div class="container-global flex  justify-between px-0 mb-10">
+          <div class="footer-link mt-10">
+            <a href="/" class="block leading-none">
+                <span class="font-['Space_Grotesk'] text-white text-[18px] font-bold tracking-tighter uppercase leading-none
+                            md:text-[20px]
+                ">CONQUERBLOCKS
+                </span>
+            </a>
+              <h4 class="mt-2">La escuela online <br>de la era moderna</h4>
+          </div>
+
+          <div>
+            <h4 class="text-left mb-2">WEBS</h4>       
+              <ul class="flex flex-col gap-2 text-[12px] text-left md:items-start">
+                <li><a href="index.html">ConquerX</a></li>
+                <li><a href="cursos.html">Formación</a></li>
+                <li><a href="info.html">Sobre nosotros</a></li>
+                <li><a href="https://es.trustpilot.com/review/conquerx.com">Opiniones</a></li>
+              </ul>  
+          </div>
+       </div>
+          
+      
+    <hr />
+          <div class="text-center text-[10px] pb-2">
+            <p>© 2026 - Todos los derechos reservados - <a href="./pages/aviso-legal.html">Aviso Legal</a></p>
+          </div>
+  </footer>
+  
+  <script>
+    const menuBtn = document.querySelector("#menu-btn");
+    const menu = document.querySelector("#menu");
+
+      /* abrir y cerrar con botón */
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("is-open");
+      });
+
+      /* cerrar al hacer click fuera */
+      document.addEventListener("click", (e) => {
+        const isClickInsideMenu = menu.contains(e.target);
+        const isClickOnButton = menuBtn.contains(e.target);
+
+        if (!isClickInsideMenu && !isClickOnButton) {
+          menu.classList.remove("is-open");
+        }
+      });
+  </script>
+</body>
+
 </html>

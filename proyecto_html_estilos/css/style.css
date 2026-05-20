@@ -1,247 +1,1052 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
+/*------- VARIABLES / TOKENS ------- */
+:root {
+  --font-main: "Space Grotesk", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
-/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
+  /* BACKGROUND */
+  --color-bg-top: #1c1f26;
+  --color-bg-bottom: #111317;
 
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
+  /* SURFACES */
+  --color-surface: #1a1c20;
 
-html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+  /* TEXT */
+  --color-text: #ffffff;
+  --color-text-muted: #9ca3af;
+
+  /* BORDERS */
+  --color-border-soft: rgba(255, 255, 255, 0.1);
+
+  /* ACCENTS */
+  --color-primary: #3B82F6;
+
+   /* HEADER */
+  --color-header-bg: rgba(17, 19, 23, 0.8);
+  --color-header-border: rgba(255, 255, 255, 0.05);
+
+  /* FONT SIZES - MOBILE */
+  --text-h1-title: 30px;
+  --text-h1-general: 16px;
+  --text-h2: 14px;
+  --text-h3: 12px;
+  --text-p: 12px;
+  --text-p-o: 13px;
+
+  /* LINE HEIGHTS */
+  --lh-tight: 1.1;
+  --lh-normal: 1.5;
+  --lh-super: 2;
+}
+/*-------- FIN ROOT MOVIL ----- */
+/* ---- TABLET ------ */
+  @media (min-width: 768px) {
+    :root {
+      --text-h1-title: 38px;
+      --text-h1-general: 28px;
+      --text-h2: 22px;
+      --text-h3: 20px;
+      --text-p: 16px;
+      --text-p-o: 14px;
+
+      --lh-tight: 1.1;
+      --lh-normal: 1.5;
+      --lh-super: 2;
+   }
+ }
+ /* DESKTOP */
+  @media (min-width: 1024px) {
+    :root {
+      --text-h1-title: 72px;
+      --text-h1-general: 36px;
+      --text-h2: 40px;
+      --text-h3: 24px;
+      --text-p: 16px;
+      --text-p-o: 14px;
+
+      --lh-tight: 0.9;
+      --lh-normal: 1.5;
+      --lh-super: 2;
+
+    }
+}
+/*--- Reset básico ---*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Customize the background color to match your design.
- */
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
+html,
+body {
+  margin: 0;
   padding: 0;
 }
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
+body {
+  min-height: 100vh;
+  font-family: var(--font-main);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-top) 0%,
+    var(--color-bg-bottom) 100%
+  );
+  color: var(--color-text);
+}
 img,
+picture,
 svg,
 video {
+  display: block;
+  max-width: 100%;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* ----LAYOUT GLOBAL ----*/
+.container-global {
+  width: min(100% - 2rem, 1100px);
+  margin-inline: auto;
+  /*border: 2px solid red;*/
+}
+@media (min-width: 1024px) {
+  .container-global {
+    width: min(100% - 4rem, 1200px);
+  }
+}
+.main-page {
+  min-height: 100vh;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-top) 0%,
+    var(--color-bg-bottom) 100%
+  );
+}
+.main-page-secondary {
+  min-height: auto;
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-top) 0%,
+    var(--color-bg-bottom) 100%
+  );
+  padding-block: 2rem;
+}
+
+/*--- UTILIDADES GENERALES --- */
+
+.font-main {
+  font-family: var(--font-main);
+}
+.bg-main-gradient {
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-top) 0%,
+    var(--color-bg-bottom) 100%
+  );
+}
+.surface {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 4px;
+}
+.text-main {
+  color: var(--color-text);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.shadow-soft {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+.line-underlined {
+  position: relative;
+  display: inline-block;
+}
+/*--- TIPOGRAFÍA --- */
+.h1-title {
+  font-size: var(--text-h1-title);
+  background-color: var(--color-bg-top);
+  padding-bottom: 1.5rem;
+  max-width: 250px;
+  text-align: center;
+  margin-inline: auto;
+  font-weight: 700;
+  line-height: var(--lh-tight);
+  letter-spacing: -1px;
   vertical-align: middle;
 }
+@media (min-width: 768px) { 
+  .h1-title {
+    max-width: 300px;
+  }  
+}
+@media (min-width: 1024px) { 
+  .h1-title {
+    max-width: 600px;
+  }  
+}
 
-/*
- * Remove default fieldset styles.
- */
+/* H1 GENERAL */
+.h1-general {
+  font-size: var(--text-h1-general);
+  line-height: 1.25;
+  font-weight: 600;
+}
 
-fieldset {
+/* H2 */
+.h2 {
+  font-size: var(--text-h2);
+  line-height: var(--lh-tight);
+  font-weight: 600;
+}
+
+/* H3 */
+.h3 {
+  font-size: var(--text-h3);
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/* PÁRRAFOS */
+.p-text {
+  font-size: var(--text-p);
+  line-height: var(--lh-normal);
+  color: var(--color-text-muted);
+}
+/* OTROS PÁRRAFOS */
+.p-text-diferent {
+  font-size: var(--text-p-o);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+  padding-bottom: 6px;
+}
+/*PARA LOS EM */
+em {
+  font-weight: 700;
+  color: white
+}
+strong {
+  color: white;
+}
+/*--- HEADER ---*/
+
+.header-main {
+  background: linear-gradient(
+    180deg,
+    rgba(28, 31, 38, 0.9) 0%,
+    rgba(17, 19, 23, 0.9) 100%
+  );
+  border-bottom: 1px solid var(--color-header-border);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.logo-main {
+  display: block;
+  font-family: var(--font-main);
+   color: var(--color-text);
+
+  font-size: 18px;
+  font-weight: 700;
+
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  line-height: 1.2;
+
+}
+@media (min-width: 768px) {
+  .logo-main {
+    font-size: 20px;
+  }
+}
+
+/*--- aquí ponemos el menú en su posición ---*/
+.header-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
+}
+/*--- Botón hamburguesa ---*/
+.menu-btn {
+  display: block;
+  font-size: 28px;
+  color: var(--color-text);
+  background: none;
   border: 0;
+  cursor: pointer;
+  position: relative;
+  z-index: 60;
+}
+/*--- menú móvil y tablet ---*/
+.nav-main {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 240px;
+  background: #111827;
+  padding: 24px;
+  z-index: 50;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.35);
+  border-radius: 0 0 8px 8px;
+}
+.nav-main.is-open {
+  display: block;
+}
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  gap: 18px;
   margin: 0;
   padding: 0;
 }
+.nav-list li {
+  width: 100%;
+  text-align: right;
+}
+.nav-dropdown details {
+  width: 100%;
+}
 
-/*
- * Allow only vertical resizing of textareas.
- */
+.nav-list a {
+  display: block;
+  text-align: right;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
+}
 
-textarea {
+.nav-list summary {
+  display: list-item;
+  list-style-position: inside;
+  text-align: right;
+  color: var(--color-text);
+  font-size: 14px;
+  cursor: pointer;
+}
+.nav-list summary::marker {
+  color: white;
+  font-size: 14px;
+  
+}
+
+.submenu {
+  margin-top: 10px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-link {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid #1d4ed8;
+  border-radius: 6px;
+  color: #60a5fa;
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .nav-main {
+    display: block;
+    position: static;
+    width: auto;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
+    margin-left: auto;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+  }
+  .nav-list li{
+    width: auto;
+  }
+  .nav-list a,
+  .nav-list summary {
+    white-space: nowrap;
+    font-size: 12px;
+  }
+
+  .nav-dropdown {
+    position: relative;
+  }
+  .nav-dropdown details {
+    position: relative;
+    display: inline-block;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #111827;
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: max-content;
+    z-index: 100;
+    
+  }
+
+  details:not([open]) .submenu {
+    display: none;
+  }
+}
+
+
+
+/*--- FOOTER --- */
+.footer {
+  background: linear-gradient(
+    180deg,
+    rgba(28, 31, 38, 0.9) 0%,
+    rgba(17, 19, 23, 0.9) 100%
+  );
+  border-bottom: 1px solid var(--color-bg-top);
+  backdrop-filter: blur(10px);
+}
+.footer .footer-link {
+  font-size: 12px;
+  text-align: center;
+}
+.footer hr {
+  height: 1px;
+  border: 0;
+  background: var(--color-text-muted);
+  margin: 32px auto;
+}
+
+/*--- COMPONENTES GENERALES ---*/
+.media-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 4px;
+  padding: 12px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+.media-card img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+/*--- HOME / INDEX--*/
+.course-card {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 12px;
+}
+.course-card figure {
+  margin: 0;
+}
+.course-card img {
+  width: 100%;
+  display: block;
+}
+.course-card h3 {
+  font-size: var(--text-h3);
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  text-decoration: solid;
+  color: white;
+}
+.course-card p {
+  font-size: var(--text-p-o);
+  color: var(--color-surface);
+  line-height: 1;
+  font-weight: 900;
+}
+.course-card a {
+  font-size: var(--text-p);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+.course-card-body {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+/*FEATURED PAGINA INDEX.HTML */
+.featured-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border-soft);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.featured-card figure {
+  margin: 0;
+}
+.featured-card img {
+  width: 100%;
+  display: block;
+}
+.featured-card h3 {
+  font-size: var(--text-h3);
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 22px;
+  text-transform: uppercase;
+  text-decoration: solid;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.featured-card p {
+  font-size: var(--text-p);
+  color: white;
+  line-height: 1;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.featured-card a {
+  display: inline-block;
+  font-size: var(--text-p);
+  color: var(--color-primary);
+  font-weight: 700;
+  text-align: center;
+}
+.featured-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+
+/*--- BLOG ---*/
+.blog-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.blog-tags .category-tag {
+  width: calc((100% - 8px) / 2);
+  max-width: 220px;
+  min-height: 58px;
+}
+.category-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.3rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+  color: var(--color-primary);
+  font-size: var(--text-p-o);
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.category-tag:hover {
+  color: white;
+  border-color: var(--color-primary);
+  background-color: rgba(255,255,255,0.05);
+}
+.blog-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.blog-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+.blog-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 10px;
+}
+.blog-card-body {
+  padding: 1rem;
+}
+.blog-card h3 {
+  margin: 0.75rem 0 0.75rem;
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  color: var(--color-primary);
+  text-align: center;
+}
+.blog-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  font-size: var(--text-p-o);
+  text-align: left;
+}
+.blog-card a {
+  text-decoration: none;
+}
+
+/*--- PAGINA CURSOS --- */
+.cursos-tags ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.cursos-tags .category-cursos {
+  width: 100%;
+  max-width: 380px;
+  min-height: 58px;
+}
+.category-cursos {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.02);
+  color: var(--color-primary);
+  font-size: var(--text-p-o);
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.cursos-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.cursos-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+.cursos-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 10px;
+}
+.cursos-card-body {
+  padding: 1rem;
+}
+.cursos-card h2 {
+  margin: 0.75rem 0 0.75rem;
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  color: var(--color-text);
+  text-align: center;
+}
+.cursos-card h3 {
+  margin: 0.75rem 0 0.75rem;
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  color: var(--color-primary);
+  text-align: center;
+}
+.cursos-card h5 {
+  margin: 0.75rem 0 0.75rem;
+  font-size: var(--text-h2);
+  line-height: 1.2;
+  color: var(--color-primary);
+  text-align: center;
+}
+
+.cursos-card p {
+  margin: 2px;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+  font-size: var(--text-p-o);
+  text-align:justify;
+  margin-bottom: 10px;
+}
+.cursos-card a {
+  text-decoration: none;
+}
+
+  /* Empresas*/
+.course-companies {
+  margin-block: 32px;
+}
+.course-companies article {
+    padding: 20px;
+    text-align: center;
+}
+.course-companies h3 {
+  font-size: var(--text-h2);
+  margin-bottom: 20px;
+}
+.course-companies img {
+  border-radius: 12px;
+}
+ /*FEATURES PAGINAS DE CURSOS */
+.course-features {
+  margin-block: 40px;
+}
+.course-features h2 {
+  font-size: var(--text-h2);
+  line-height: var(--lh-tight);
+  text-align: center;
+  margin-bottom: 24px;
+}
+.course-features-grid {
+  display: grid;
+  gap: 20px;
+}
+.course-feature-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 20px;
+}
+.course-feature-card img {
+  width: 56px;
+  margin-bottom: 16px;
+}
+.course-feature-card h3 {
+  font-size: var(--text-h2);
+  margin-bottom: 8px;
+}
+.course-feature-card h6 {
+  color: var(--color-primary);
+  font-size: var(--text-p-o);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.course-feature-card p {
+  color: var(--color-text-muted);
+  font-size: var(--text-p-o);
+  line-height: 1.6;
+}
+ /* Top Feature */
+.feature-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.feature-top img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.feature-top h3 {
+  margin: 0 0 4px;
+}
+.feature-top h6 {
+  margin: 0;
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+/*--- EQUIPO DOCENTE ---*/
+.teachers-section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.teachers {
+  display: grid;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  overflow: hidden;
+  max-width: 340px;
+  margin-inline: auto; 
+}
+.teachers h4 {
+  font-size: var(--text-h2);
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 16px;
+} 
+.teachers h6 {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: var(--text-p-o);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.teachers img {
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin-inline: auto;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-soft);
+  background-color: var(--color-surface);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+}
+.teachers p {
+  margin: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.3;
+  font-size: var(--text-p-o);
+  text-align:justify;
+  margin-bottom: 10px;
+}
+
+/* ---- REGISTRO ------- */
+.form-register {
+  display: grid;
+  gap: 24px;
+  max-width: 700px;
+  margin-inline: auto;
+}
+.form-box {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 24px;
+}
+.form-box legend {
+  padding-inline: 8px;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+.form-group {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+.form-group label {
+  font-size: var(--text-p-o);
+  color: var(--color-text);
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  color: white;
+  font-family: inherit;
+}
+.form-group textarea {
   resize: vertical;
 }
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.form-actions button,
+.form-actions input {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.form-actions button:hover,
+.form-actions input:hover {
+  background: rgba(255,255,255,0.08);
+  color: white;
+}
+/*--- FORM - LOGIN -- */
 
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
 
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
 
-/*
- * Hide visually and from screen readers
- */
 
-.hidden,
-[hidden] {
-  display: none !important;
+
+
+
+/* Reponsive */
+/*--- PAGINAS INDIVIDUALES DE CURSO ---*/
+  /* Hero curso */
+.course-hero {
+  display: grid;
+  gap: 24px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+.course-hero h1 {
+  font-size: var(--text-p-o);
+  color: var(--color-primary);
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+.course-hero h3 {
+  font-size: var(--text-h1-general);
+  line-height: var(--lh-tight);
+  margin-bottom: 16px;
+}
+.course-hero p {
+  font-size: var(--text-p);
+  color: var(--color-text);
+  text-align: justify;
+}
+.course-hero img {
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin-inline: auto;
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
 
-.visually-hidden {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
+/*---REPONSIVE COMPONENTES ---*/
+/*--- TABLET ---*/
+@media (min-width: 768px) {
+
+  /* HERO CURSOS */
+  .course-hero {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: left;
+  }
+ /* FEATURES CURSOS */
+  .course-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* BLOG TAGS */
+  .blog-tags .category-tag {
+    width: auto;
+  }
+  /* REGISTRO */
+  .form-register {
+    max-width: 900px;
+  }
+  .form-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 24px;
+  }
+  .form-box legend {
+    grid-column: 1 / -1;
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .form-group:has(textarea),
+  .form-group:has(input[type="file"]) {
+    grid-column: 1 / -1;
+  }
+  /* TEACHERS */
+  .teachers-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  /* COURSE CARD */
+  .course-card {
+    flex: 1;
+    position: relative;
+    height: 320px;
+  }
+  .course-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+  }
+  .course-card-body {
+    position: absolute;
+    inset: auto 0 0 0;
+    padding: 20px;
+  }
+  .course-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    min-height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /*--- FEATUED-CARD ---*/
+  .featured-card-body {
+    height: 100%;
+    align-items: center;
+  }
+  .featured-card-body img {
+    min-width: 100%;
+  }
+
+
 }
+/*--- DESKTOP ---*/
+@media (min-width: 1024px) {
 
-/*
- * Extends the .visually-hidden class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.visually-hidden.focusable:active,
-.visually-hidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-
-/*
- * Clearfix: contain floats
- *
- * The use of `table` rather than `block` is only necessary if using
- * `::before` to contain the top-margins of child elements.
- */
-
-.clearfix::before,
-.clearfix::after {
-  content: "";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
-}
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
-}
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
+  /* FEATURES CURSOS */
+  .course-features-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 
-  a,
-  a:visited {
-    text-decoration: underline;
+  /* TEACHERS */
+  .teachers-section {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  a[href]::after {
-    content: " (" attr(href) ")";
+  /* REGISTRO */
+  .form-register {
+    max-width: 1000px;
   }
 
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
+  .form-box {
+    padding: 32px;
   }
 }
-

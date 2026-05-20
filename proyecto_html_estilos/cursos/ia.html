@@ -1,194 +1,252 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="es">
 
 <head>
-
-<meta charset="utf-8">
-<title>Academia Conquer Blocks Academia de programación</title>
-<meta name="description" content="Conquer Blocks es la mayor academia de programación en habla hispana, 
-    y la que cuenta con mayores garantías de empleo. Aquí podrás aprender sobre Desarrollo Full-Stack, Desarrollo 
-    Blockchain, Inteligencia Artificial y Ciberseguridad.">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<link rel="../icon" href="../favicon.ico" sizes="any">
-
-<link rel="apple-touch-icon" href="../icon.png">
-
-<link rel="stylesheet" href="css/normalize.css">
-<link rel="stylesheet" href="css/style.css">
-
-<link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#fafafa">
-
+  <meta charset="utf-8">
+  <title>Academia Conquer Blocks Academia de programación</title>
+  <meta name="description" content="Conquer Blocks es la mayor academia de programación en habla hispana, 
+      y la que cuenta con mayores garantías de empleo. Aquí podrás aprender sobre Desarrollo Full-Stack, Desarrollo 
+      Blockchain, Inteligencia Artificial y Ciberseguridad.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../favicon.ico" sizes="any">
+  <!--<link rel="icon" href="icon.svg" type="image/svg+xml">-->
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="manifest" href="../site.webmanifest">
+  <meta name="theme-color" content="#fafafa">
+   
 </head>
 
 <body>
-    <header>
-      <picture>
-        <img src="../img/logo_conquerx.webp" width="15%" height="15%" >
-      </picture>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../info.html">Sobre nosotros</a></li>
-          <li><a href="../cursos.html">Cursos</a></li>
-          <li><a href="../blog.html">Blog</a></li>
-          <li><a href="../registro.html">Registro</a></li>
-          <li><a href="../login.html">Login</a></li>
-          <li><a href="../contacto.html">Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
+    <header class="header-main">
+    <div class="container-global header-wrapper">      
+        <a href="/" class="logo-main">CONQUERBLOCKS</a>
 
-  <main>
-              
-    <section>
-      <h3>MÁSTER EN INTELIGENCIA ARTIFICIAL DE CONQUER BLOCKS</h3>
-        <h1>El Máster en Inteligencia Artificial que revoluciona el mundo de la programación</h1>
-        <p>La formación donde aprenderás todo lo que necesitas para convertirte en programador especializado 
-          en Inteligencia Artificial, <strong></strong>y multiplicar tu valor y salario en el mercado laboral.</strong></p>
-          <img src="../img/cursos/ia.webp" alt="">
-    </section>   
-    <section>
-      <article>
-        <figure>
-        <figcaption><h3>Nuestros profesores han trabajado con ...</h3></figcaption>
-        <img src="../img/cursos/trabajado.webp" alt="">
-      </figure>
+      <button id="menu-btn" class="menu-btn" aria-label="Abrir menú">☰</button>
+
+        <nav id="menu" class="nav-main">
+          <ul class="nav-list">
+            <li class="nav-item nav-dropdown">
+            <details>
+              <summary>Formaciones</summary>
+                <ul class="submenu">
+                  <li><a href="../cursos/fullstack.html">Master Fullstack</a></li>
+                  <li><a href="../cursos/blockchain.html">Master en Blockchain</a></li>
+                  <li><a href="../cursos/ia.html">Master Inteligencia Artificial</a></li>
+                </ul>
+              </details>
+              </li>
+            
+              <li><a href="../pages/info.html">Sobre nosotros</a></li>
+              <li><a href="../pages/blog.html">Blog</a></li>
+              <li><a href="../pages/registro.html">Registro</a></li>
+              <li><a href="../pages/login.html">Login</a></li>
+          </ul>
+        </nav>
+    </div>
+  </header>
+
+  <main class="main-page w-full">
+    <div class="container-global">            
+      <section class="course-hero">
+        <div> 
+          <h1>MÁSTER EN INTELIGENCIA ARTIFICIAL DE CONQUER BLOCKS</h1>
+            <h3>El Máster en Inteligencia Artificial que revoluciona el mundo de la programación</h3>
+            <p>La formación donde aprenderás todo lo que necesitas para convertirte en programador especializado 
+              en Inteligencia Artificial, <strong></strong>y multiplicar tu valor y salario en el mercado laboral.</strong></p>
+        </div>
+        <img src="../img/cursos/ia.webp" alt="">
+      </section>   
+      <section class="course-companies">
+        <article>
+          <figure>
+          <figcaption><h3>Nuestros profesores han trabajado con ...</h3></figcaption>
+          <img src="../img/cursos/trabajado.webp" alt="">
         </figure>
-      </article>
-    </section>  
-
-    <section>
-        <h2>Con el Máster en Desarrollo Web Full-Stack, en tan solo 12 meses vas a...</h2>
-        <article>
-          <img src="../img/cursos/empleo.webp" alt="">
-          <h3>Encontrar trabajo</h3>
-          <h6>bolsa de empleo</h6>
-          <p>Tendrás acceso a nuestra bolsa de empleo de empresas colaboradoras, que confían en 
-            la calidad de nuestros Másteres y prefieren contratar a nuestros estudiantes. Empleo 
-            garantizado por contrato.</p>
+          </figure>
         </article>
-        <article>
-          <img src="../img/cursos/programa.webp" alt="">
-          <h3>Disponer del programa más completo del mercado</h3>
-          <h6>Todo lo que necesitas</h6>
-          <p>El que incluye mayor número de tecnologías, lenguajes, librerías y frameworks del 
-            mercado. Si encuentras un Máster más completo, te devolvemos tu dinero.</p>
-        </article>
-        <article>
-          <img src="../img/cursos/conocimientos.webp" alt="">
-          <h3>Aprender desde 0</h3>
-          <h6>Pensado para ti</h6>
-          <p>Gracias a un sistema de enseñanza pensado para que cualquier persona pueda aprender... 
-            sin importar tus conocimientos previos.</p>
-        </article>
-        <article>
-          <img src="../img/cursos/aprende.webp" alt="">
-          <h3>Aprender con un sistema de enseñanza enfocado al mundo laboral</h3>
-          <h6>Enfocado al mundo laboral
-          </h6>
-          <p>Te enseñamos las tecnologías que las empresas más contratan hoy en día, y te enseñamos 
-            a pasar sus procesos de selección.</p>
-        </article>
-      
-    </section>
-    <br> 
-      <section>
-        <h1>Profesorado del Máster</h1>
-        <article>
-            <h4>Elena Hernández</h4>  
-            <h6>Doctora en Astrofísica Computacional</h6>
-            <img src="../img/info/elena.png" alt="logotipo HML5", srcset="../img/info/elena.png 1300w">
-            <p>Profesora de Python en el Máster, se ha dedicado a enseñar programación en la Universidad a personas 
-              que, como tú, partían de 0, y será la que te enseñe tu primer lenguaje de programación.</p>
-        </article>
-        <article>
-            <h4>Salvador Pérez</h4>
-            <h6>Doctor en Ciberseguridad</h6>
-            <img src="../img/info/salvador.png" alt="logotipo HML5", srcset="../img/info/salvador.png 1200w">
-            <p>La especialización de Salvador en su trayectoria como profesor, y en nuestro Máster, tiene un rol fundamental 
-              en nuestra metodología, pues enseña la fase 1 previa a la programación, el pseudocódigo.</p>
-        </article>
-        <article>
-            <h4>Bienvenido Sáez</h4>
-            <h6>Programador especializado</h6>
-            <img src="../img/info/bienvenido2.png" alt="logotipo HML5", srcset="../img/info/bienvenido2.png 1300w">
-            <p>Bienvenido cuenta con más de 15 años de experiencia en el sector educativo, especialmente formando 
-              profesionales deldesarrollo en tecnologías como HTML, CSS, Javascript y Django, tecnologías en la 
-              que es mentor en nuestro Máster.</p>
-        </article>
-        <article>
-            <h4>Iván Martín</h4>
-            <h6> INGENIERO AERONÁUTICO</h6>
-            <img src="../img/info/martin.png" alt="logotipo HML5", srcset="../img/info/martin.png 900w">
-            <p>Consultor especialista en inteligencia artificial para KPMG mejorando los procesos internos 
-              para mejorar su eficiencia. Actualmente es responsable global de Información No Financiera y 
-              Sostenibilidad en Acciona.</p>
-        </article>
-        <article>
-          <h4>Víctor Quilón</h4>
-          <h6>INGENIERO EN TELECOMUNICACIONES</h6>
-          <img src="../img/info/quilon.png" alt="logotipo HML5", srcset="../img/info/quilon.png 900w">
-          <p>Senior Machine Learning Engineeren Indra, desarrollando aplicativos/asistentes que usan 
-            técnicas de IA Generativa y NLP.</p>
-        </article>
-        <article>
-          <h4>Alejandro Medrano</h4>
-          <h6>INGENIERO EN MACHINE LEARNING</h6>
-          <img src="../img/info/medrano.png" alt="logotipo HML5", srcset="../img/info/medrano.png 900w">
-          <p>Ingeniero en Machine Learning en Visium tras ocupar el puesto como Data-driven solutions 
-            para la resolución de problemas relacionados con el lenguaje natural en Indra.</p>
-        </article>
-        <article>
-          <h4>Yolanda López</h4>
-          <h6>Ingeniera en Telecomunicaciones</h6>
-          <img src="../img/info/lopez.png" alt="logotipo HML5", srcset="../img/info/lopez.png 900w">
-          <p>Se encarga de enseñar SQL y todo el área dedicada al procesamiento de datos dentro de nuestro Máster en Desarrollo 
-            Full-Stack, así como el lenguaje de programación Solidity en la especialización en Blockchain..</p>
-        </article>          
-        <article>
-            <h4>Jesús M. Zarranz Calvo</h4>
-            <h6>Strategy & Business Innovation Expert</h6>
-            <img src="../img/info/zarranz.webp" alt="logotipo HML5", srcset="../img/info/zarranz.webp 1200w">
-            <p>Gran experiencia laboral en innovación, data e inteligencia artificial aplicada a marketing y 
-              desarrollo de negocio de productos digitales. En la actualidad me dedico a ofrecer soluciones tecnológicas 
-              a las líneas de negocio de Acciona.</p>
-        </article>
-        
-        <article>
-            <h4>Teresa Juliá</h4>
-            <h6>Profesora de Inglés</h6>
-            <img src="../img/info/teresa.png" alt="logotipo HML5", srcset="../img/info/teresa.png 1200w">
-            <p>En 3 Universidades de Tokyo y mentora en la academia de inglés incluida en nuestros programas. Su misión es llevarte hasta un nivel de inglés no nativo, 
-              pero suficiente como para que puedas trabajar de forma remota para empresas del extranjero y conseguir un mejor salario.</p>
-        </article>
+      </section>  
+      <section class="course-features">
+        <h2>El Máster en Desarrollo Blockchain que arrasa en el mercado... 
+        </h2>
+        <div class="course-features-grid">
+          <article class="course-feature-card">
+            <div class="feature-top">
+              <img src="../img/cursos/empleo.webp" alt="">
           
-        
-          
+            <div>
+              <h3>Encontrar trabajo</h3>
+              <h6>bolsa de empleo</h6>
+            </div>
+          </div>
+            <p>La formación donde aprenderás todo lo que necesitas para convertirte 
+              en programador especializado en tecnología Blockchain, <strong>y multiplicar tu valor 
+              y salario en el mercado laboral.</strong></p>
+          </article>
+          <article class="course-feature-card">
+            <div class="feature-top">
+              <img src="../img/cursos/programa.webp" alt="">
+                <div>
+                <h3>Disponer del programa más completo del mercado</h3>
+                <h6>Todo lo que necesitas</h6>
+              </div>
+            </div>
+            <p>El que incluye mayor número de tecnologías, lenguajes, librerías y frameworks del 
+              mercado. Si encuentras un Máster más completo, te devolvemos tu dinero.</p>
+          </article>
+          <article class="course-feature-card">
+            <div class="feature-top">
+              <img src="../img/cursos/conocimientos.webp" alt="">
+                <div>
+                <h3>Aprender desde 0</h3>
+                <h6>Pensado para ti</h6>
+              </div>
+            </div>   
+            <p>Gracias a un sistema de enseñanza pensado para que cualquier persona pueda aprender... 
+                sin importar tus conocimientos previos.</p>
+             
+          </article>
+          <article class="course-feature-card">
+            <div class="feature-top">
+                <img src="../img/cursos/aprende.webp" alt="">
+                <div>
+                <h3>Aprender con un sistema de enseñanza enfocado al mundo laboral</h3>
+                <h6>Enfocado al mundo laboral
+                </h>
+                </div>
+            </div>
+            <p>Te enseñamos las tecnologías que las empresas más contratan hoy en día, y te enseñamos 
+              a pasar sus procesos de selección.</p>
+          </article>
+        </div>
       </section>
-
+      <br> 
+      <section class="teachers-section">
+          <h1 class="h1 text-center mt-8 mb-8 uppercase">Profesorado del Máster</h1>
+          <article class="teachers">
+              <h4>Elena Hernández</h4>  
+              <h6>Doctora en Astrofísica Computacional</h6>
+              <img src="../img/info/elena.png" alt="logotipo HML5", srcset="../img/info/elena.png 1300w">
+              <p>Profesora de Python en el Máster, se ha dedicado a enseñar programación en la Universidad a personas 
+                que, como tú, partían de 0, y será la que te enseñe tu primer lenguaje de programación.</p>
+          </article>
+          <article class="teachers">
+              <h4>Salvador Pérez</h4>
+              <h6>Doctor en Ciberseguridad</h6>
+              <img src="../img/info/salvador.png" alt="logotipo HML5", srcset="../img/info/salvador.png 1200w">
+              <p>La especialización de Salvador en su trayectoria como profesor, y en nuestro Máster, tiene un rol fundamental 
+                en nuestra metodología, pues enseña la fase 1 previa a la programación, el pseudocódigo.</p>
+          </article>
+          <article class="teachers">
+              <h4>Bienvenido Sáez</h4>
+              <h6>Programador especializado</h6>
+              <img src="../img/info/bienvenido2.png" alt="logotipo HML5", srcset="../img/info/bienvenido2.png 1300w">
+              <p>Bienvenido cuenta con más de 15 años de experiencia en el sector educativo, especialmente formando 
+                profesionales deldesarrollo en tecnologías como HTML, CSS, Javascript y Django, tecnologías en la 
+                que es mentor en nuestro Máster.</p>
+          </article>
+          <article class="teachers">
+              <h4>Iván Martín</h4>
+              <h6> INGENIERO AERONÁUTICO</h6>
+              <img src="../img/info/martin.png" alt="logotipo HML5", srcset="../img/info/martin.png 900w">
+              <p>Consultor especialista en inteligencia artificial para KPMG mejorando los procesos internos 
+                para mejorar su eficiencia. Actualmente es responsable global de Información No Financiera y 
+                Sostenibilidad en Acciona.</p>
+          </article>
+          <article class="teachers">
+            <h4>Víctor Quilón</h4>
+            <h6>INGENIERO EN TELECOMUNICACIONES</h6>
+            <img src="../img/info/quilon.png" alt="logotipo HML5", srcset="../img/info/quilon.png 900w">
+            <p>Senior Machine Learning Engineeren Indra, desarrollando aplicativos/asistentes que usan 
+              técnicas de IA Generativa y NLP.</p>
+          </article>
+          <article class="teachers">
+            <h4>Alejandro Medrano</h4>
+            <h6>INGENIERO EN MACHINE LEARNING</h6>
+            <img src="../img/info/medrano.png" alt="logotipo HML5", srcset="../img/info/medrano.png 900w">
+            <p>Ingeniero en Machine Learning en Visium tras ocupar el puesto como Data-driven solutions 
+              para la resolución de problemas relacionados con el lenguaje natural en Indra.</p>
+          </article>
+          <article class="teachers">
+            <h4>Yolanda López</h4>
+            <h6>Ingeniera en Telecomunicaciones</h6>
+            <img src="../img/info/lopez.png" alt="logotipo HML5", srcset="../img/info/lopez.png 900w">
+            <p>Se encarga de enseñar SQL y todo el área dedicada al procesamiento de datos dentro de nuestro Máster en Desarrollo 
+              Full-Stack, así como el lenguaje de programación Solidity en la especialización en Blockchain..</p>
+          </article>          
+          <article class="teachers">
+              <h4>Jesús M. Zarranz Calvo</h4>
+              <h6>Strategy & Business Innovation Expert</h6>
+              <img src="../img/info/zarranz.webp" alt="logotipo HML5", srcset="../img/info/zarranz.webp 1200w">
+              <p>Gran experiencia laboral en innovación, data e inteligencia artificial aplicada a marketing y 
+                desarrollo de negocio de productos digitales. En la actualidad me dedico a ofrecer soluciones tecnológicas 
+                a las líneas de negocio de Acciona.</p>
+          </article>
+          
+          <article class="teachers">
+              <h4>Teresa Juliá</h4>
+              <h6>Profesora de Inglés</h6>
+              <img src="../img/info/teresa.png" alt="logotipo HML5", srcset="../img/info/teresa.png 1200w">
+              <p>En 3 Universidades de Tokyo y mentora en la academia de inglés incluida en nuestros programas. Su misión es llevarte hasta un nivel de inglés no nativo, 
+                pero suficiente como para que puedas trabajar de forma remota para empresas del extranjero y conseguir un mejor salario.</p>
+          </article>
+      </section>
+    </div>
   </main>
   
-  <footer>
+ <footer class="footer relative top-0 left-0 w-full">
     <hr />
-      <figure>
-        <img src="../img/logo_conquerx.webp" width="10%" height="10%" >   
-      </figure>
-        <h4>La escuela online <br>
-            de la era moderna</h4>
-        <p>
-          <h4>WEBS</h4>       
-         
-            <li><a href="../index.html">ConquerX</a></li>
-            <li><a href="../cursos.html">Formación</a></li>
-            <li><a href="../info.html">Sobre nosotros</a></li>
-            <li><a href="https://es.trustpilot.com/review/conquerx.com">Opiniones</a></li>  
-        </p>
-      
-        <p>© 2023 - Todos los derechos reservados - <a href="../aviso-legal.html">Aviso Legal</a></p>
+      <div class="container-global flex  justify-between px-0 mb-10">
+          <div class="footer-link mt-10">
+            <a href="/" class="block leading-none">
+                <span class="font-['Space_Grotesk'] text-white text-[18px] font-bold tracking-tighter uppercase leading-none
+                            md:text-[20px]
+                ">CONQUERBLOCKS
+                </span>
+            </a>
+              <h4 class="mt-2">La escuela online <br>de la era moderna</h4>
+          </div>
+
+          <div>
+            <h4 class="text-left mb-2">WEBS</h4>       
+              <ul class="flex flex-col gap-2 text-[12px] text-left md:items-start">
+                <li><a href="index.html">ConquerX</a></li>
+                <li><a href="cursos.html">Formación</a></li>
+                <li><a href="info.html">Sobre nosotros</a></li>
+                <li><a href="https://es.trustpilot.com/review/conquerx.com">Opiniones</a></li>
+              </ul>  
+          </div>
+       </div>      
     <hr />
+          <div class="text-center text-[10px] pb-2">
+            <p>© 2026 - Todos los derechos reservados - <a href="./pages/aviso-legal.html">Aviso Legal</a></p>
+          </div>
   </footer>
+ 
+  <script>
+    const menuBtn = document.querySelector("#menu-btn");
+    const menu = document.querySelector("#menu");
+
+      /* abrir y cerrar con botón */
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("is-open");
+      });
+
+      /* cerrar al hacer click fuera */
+      document.addEventListener("click", (e) => {
+        const isClickInsideMenu = menu.contains(e.target);
+        const isClickOnButton = menuBtn.contains(e.target);
+
+        if (!isClickInsideMenu && !isClickOnButton) {
+          menu.classList.remove("is-open");
+        }
+      });
+  </script>
 </body>
 
 </html>
